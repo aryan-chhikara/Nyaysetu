@@ -33,7 +33,7 @@ const SUGGESTED = [
 ];
 
 async function askAPI(query: string) {
-  const res = await fetch("http://localhost:8000/api/v1/qa/ask", {
+  const res = await fetch("https://nyaysetu.up.railway.app/api/v1/qa/ask", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query }),
@@ -125,6 +125,7 @@ function AiBubble({ msg }: { msg: Message }) {
     setReactions(r => ({ ...r, copy: true }));
     setTimeout(() => setReactions(r => ({ ...r, copy: false })), 2000);
   }
+
 
   return (
     <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "24px" }}>
@@ -398,7 +399,7 @@ export default function Home() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      const res = await fetch("http://localhost:8000/api/v1/documents/analyze", {
+      const res = await fetch("https://nyaysetu.up.railway.app/api/v1/documents/analyze", {
         method: "POST",
         body: formData,
       });
