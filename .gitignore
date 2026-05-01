@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Environment
+.env
+*.env
+
+# Data & indexes (too large for git)
+backend/data/raw/
+backend/data/index/
+*.faiss
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/settings.json
