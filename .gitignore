@@ -11,9 +11,9 @@ __pycache__/
 
 # Data & indexes (too large for git)
 backend/data/raw/
-backend/data/index/
-*.faiss
-*.pkl
+#backend/data/index/
+#*.faiss
+#*.pkl
 
 # OS
 .DS_Store
